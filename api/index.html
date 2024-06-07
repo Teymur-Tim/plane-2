@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Aircrafts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpg" href="images/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <h1>Aircraft Types</h1>
+      <nav>
+        <button class="active" onclick="filterAircraft('fighter')">
+          Fighter Aircraft
+        </button>
+
+        <button onclick="filterAircraft('bomber')">Bomber Aircraft</button>
+        <button onclick="filterAircraft('cargo')">Cargo Aircraft</button>
+        <button onclick="filterAircraft('experimental')">
+          Experimental Aircraft
+        </button>
+        <button onclick="filterAircraft('business')">Business Jets</button>
+        <a
+          href="general.html"
+          style="
+            background-color: rgba(191, 241, 236, 0.827);
+            color: rgb(33, 34, 20);
+          "
+          >General Info</a
+        >
+        <div class="navbar">
+          <span id="navbar-status"></span>
+        </div>
+      </nav>
+    </header>
+    <main id="aircraft-container"></main>
+    <script src="scripts.js"></script>
+    <script>
+      window.addEventListener("offline", function () {
+        document.getElementById("status").innerHTML = "Ты не в сети";
+      });
+      window.addEventListener("online", function () {
+        document.getElementById("status").innerHTML = "";
+      });
+    </script>
+    <script src="status.js"></script>
+  </body>
+</html>

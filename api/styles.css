@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #617c88, #5492d0);
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav button,
+nav a {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover,
+nav a:hover {
+  background-color: #777;
+}
+
+nav button.active {
+  background-color: #999;
+}
+
+#aircraft-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.aircraft-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.aircraft-card img {
+  max-width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.aircraft-card h3 {
+  margin: 10px 0;
+}
+
+.aircraft-card:hover {
+  transform: translateY(-5px);
+}
+
+.aircraft-card.enlarged img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+main {
+  padding: 20px;
+}
+
+section#general-info {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #dddddd58;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  #aircraft-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .aircraft-card {
+    width: 100%;
+  }
+
+  section#general-info {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px 0;
+  }
+
+  nav button,
+  nav a {
+    padding: 5px 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section#general-info {
+    padding: 5px;
+  }
+}
